@@ -282,17 +282,23 @@ function dibujarRadar(){
     actualizarLista();
 }
 
-        }else{
+       }else{
 
-            ctx.drawImage(
-                obj.imagen,
-                obj.x-25,
-                obj.y-25,
-                50,
-                50
-            );
+    ctx.fillStyle = "yellow";
 
-        }
+    ctx.beginPath();
+
+    ctx.arc(
+        obj.x,
+        obj.y,
+        10,
+        0,
+        Math.PI*2
+    );
+
+    ctx.fill();
+
+}
 
     }
 
