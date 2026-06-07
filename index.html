@@ -272,7 +272,7 @@ function dibujarRadar(){
             let diferencia =
             Math.abs(obj.angulo-angulo);
 
-           if(
+            if(
     diferencia < 0.03 ||
     diferencia > (Math.PI*2)-0.03
 ){
@@ -282,23 +282,17 @@ function dibujarRadar(){
     actualizarLista();
 }
 
-       }else{
+        }else{
 
-    ctx.fillStyle = "yellow";
+            ctx.drawImage(
+                obj.imagen,
+                obj.x-25,
+                obj.y-25,
+                50,
+                50
+            );
 
-    ctx.beginPath();
-
-    ctx.arc(
-        obj.x,
-        obj.y,
-        10,
-        0,
-        Math.PI*2
-    );
-
-    ctx.fill();
-
-}
+        }
 
     }
 
